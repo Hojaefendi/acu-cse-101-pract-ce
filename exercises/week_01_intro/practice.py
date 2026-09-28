@@ -34,7 +34,8 @@ from decimal import Decimal  # noqa: F401
 # TODO: Write Part 1 together in class below:
 
 name = input('What is your name? ')
-print(f'Hello, {name}! Welcome to CSE 101.')
+print(f'Hello, {name} welcome to CSE 101.')
+
 
 # ------------------------------------------------------------------------------
 # Part 2: Integer Input & Type Conversion - int()
@@ -46,9 +47,10 @@ print(f'Hello, {name}! Welcome to CSE 101.')
 # 3. Print: print(f"You will turn {age} years old in 2026.")
 # ------------------------------------------------------------------------------
 # TODO: Write Part 2 together in class below:
-birth_year = input('What is your date of birth? ')
+
+birth_year = int(input('Year you were born in: '))
 age = 2026 - birth_year
-print(f'you are {age} year old.')
+print(f'You will turn {age} years old in 2026')
 
 # ------------------------------------------------------------------------------
 # Part 3: Float Input & Type Conversion - float()
@@ -61,6 +63,7 @@ print(f'you are {age} year old.')
 # ------------------------------------------------------------------------------
 # TODO: Write Part 3 together in class below:
 
+print((float(input('Temperature in celcius: ')) * 9 / 5) + 32)
 
 # ------------------------------------------------------------------------------
 # Part 4: Cleaning Input with .strip()
@@ -73,6 +76,7 @@ print(f'you are {age} year old.')
 # ------------------------------------------------------------------------------
 # TODO: Write Part 4 together in class below:
 
+print(f'Registered student ID: {input('Enter your student ID: ').strip()}')
 
 # ------------------------------------------------------------------------------
 # Part 5: Float Comparison Pitfall & math.isclose()
@@ -86,6 +90,9 @@ print(f'you are {age} year old.')
 # ------------------------------------------------------------------------------
 # TODO: Write Part 5 together in class below:
 
+float_sum = 0.1 + 0.2
+if not float_sum == 0.3 and math.isclose(float_sum, 0.3):
+    print('0.1 + 0.2 in float does not equal to 0.3, and it has a negligible error margin.')
 
 # ------------------------------------------------------------------------------
 # Part 6: Exact Financial Arithmetic with Decimal
@@ -97,6 +104,7 @@ print(f'you are {age} year old.')
 # ------------------------------------------------------------------------------
 # TODO: Write Part 6 together in class below:
 
+print(f'Exact Decimal sum: {Decimal('0.1') + Decimal('0.2')}')
 
 # ------------------------------------------------------------------------------
 # Part 7: Multiple Assignment & Variable Swapping
@@ -109,6 +117,9 @@ print(f'you are {age} year old.')
 # ------------------------------------------------------------------------------
 # TODO: Write Part 7 together in class below:
 
+a, b = 12, 34
+a, b = b, a
+print(f'Swapped: a = {a}, b = {b}')
 
 # ------------------------------------------------------------------------------
 # Part 8: Chained Assignment & Re-binding
@@ -121,6 +132,9 @@ print(f'you are {age} year old.')
 # ------------------------------------------------------------------------------
 # TODO: Write Part 8 together in class below:
 
+x = y = 50
+x = x + 10
+print(f'Rebound: x = {x}, y = {y}')
 
 # ------------------------------------------------------------------------------
 # Part 9: String Operations (+, *, len, and string methods)
@@ -135,6 +149,12 @@ print(f'you are {age} year old.')
 # ------------------------------------------------------------------------------
 # TODO: Write Part 9 together in class below:
 
+first_name, last_name = 'ada', 'lovelace'
+full_name = (first_name + ' ' + last_name).title()
+print('=' * 30)
+print(full_name)
+print(full_name.upper())
+print(len(full_name))
 
 # ------------------------------------------------------------------------------
 # Part 10: String Formatting for print() (f-strings, precision & print parameters)
@@ -149,4 +169,9 @@ print(f'you are {age} year old.')
 # ------------------------------------------------------------------------------
 # TODO: Write Part 10 together in class below:
 
-
+price, percentage = 49.9567, 0.08
+print(f'Price: ${price:.2f}')
+print(f'Tax rate: {percentage:.1%}')
+print('Python', 'CSE101', 'Acibadem', sep=' :: ')
+print('Saving progress', end='... ')
+print('Done!')
