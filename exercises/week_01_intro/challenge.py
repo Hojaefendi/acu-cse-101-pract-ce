@@ -29,6 +29,14 @@ import math  # noqa: F401
 # ------------------------------------------------------------------------------
 # TODO: Write your code for Challenge 1 below:
 
+EUR = float(input('Amount in EUR: '))
+exchange_rate = float(input('Exchange rate (EUR to USD): '))
+groos_usd = EUR * exchange_rate
+fee = gross_usd * 0.02
+net_usd = gross_usd - fee
+print(f'Gross USD: ${gross_usd:.2f}')
+print(f'Fee: ${fee:.2f}')
+print(f'Net USD: ${net_usd:.2f}')
 
 # ------------------------------------------------------------------------------
 # Challenge 2: Pizza Party Slices & Leftovers
@@ -52,6 +60,15 @@ import math  # noqa: F401
 # ------------------------------------------------------------------------------
 # TODO: Write your code for Challenge 2 below:
 
+students = int(input('Number of students: '))
+pizzas = int(input('Number of pizzas: '))
+slicesp_pizza = int(input('Slicer per pizza: '))
+total_slices = pizzas * slicesp_pizza
+slices_per_student = total_slices // students
+leftover_slices = total_slices % students
+print(f'Total slices: {total_slices}')
+print(f'Slices per student: {slices_per_student}')
+print(f'Leftover slices: {leftover_slices}')
 
 # ------------------------------------------------------------------------------
 # Challenge 3: Sphere Geometry (Volume & Surface Area)
@@ -69,6 +86,11 @@ import math  # noqa: F401
 # ------------------------------------------------------------------------------
 # TODO: Write your code for Challenge 3 below:
 
+radius = float(input('Sphere radius: '))
+volume = (4/3) * math.pi * (radius ** 2)
+surface_area = 4 * math.pi * (radius ** 2)
+print(f'Sphere volume: {volume:.2f}')
+print(f'Sphere surface area: {surface_area.:2f}')
 
 # ------------------------------------------------------------------------------
 # Challenge 4: 3-Cup Shell Game (Cyclic Variable Rotation)
@@ -88,6 +110,11 @@ import math  # noqa: F401
 # ------------------------------------------------------------------------------
 # TODO: Write your code for Challenge 4 below:
 
+cup_a = input('Item in cup A: ').strip()
+cup_b = input('Item in cup B: ').strip()
+cup_c = input('Item in cup C: ').strip()
+cup_a, cup_b, cup_c = cup_c, cup_a, cub_b
+print(cup_a, cup_b, cup_c, sep=' -> ')
 
 # ------------------------------------------------------------------------------
 # Challenge 5: Digital Event Badge Generator
@@ -114,4 +141,14 @@ import math  # noqa: F401
 # ------------------------------------------------------------------------------
 # TODO: Write your code for Challenge 5 below:
 
+name = input('Atendee name: ').strip().title()
+department = input('Department: ').strip().upper()
+role = input('Role: ').strip().title()
+print('#' * 32)
+print(f'NAME: {name}')
+print(f'DEPT: {department}')
+print(f'ROLE: {role}')
+print(f'NAME LENGTH: {len(name)}')
+print('#' * 32)
+                   
 
