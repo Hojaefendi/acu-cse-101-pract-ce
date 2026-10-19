@@ -15,6 +15,9 @@ def greet(name):
     # TODO: Return the greeting.
     pass
 
+def greet(name):
+    print('hi ' + name)
+    pass
 
 # Challenge 2: Square a Number
 # Return the given number multiplied by itself.
@@ -23,6 +26,8 @@ def square(number):
     # TODO: Return the square of number.
     pass
 
+def square(number):
+    return number**2
 
 # Challenge 3: Minutes to Seconds
 # Return the number of seconds in the supplied number of minutes.
@@ -32,3 +37,6 @@ def square(number):
 def minutes_to_seconds(minutes):
     # TODO: Return the duration in seconds.
     pass
+
+def minutes_to_seconds(minutes):
+    return minutes * 60
