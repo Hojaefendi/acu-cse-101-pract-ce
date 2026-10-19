@@ -34,7 +34,7 @@ def add(first, second):
     pass
 
 def add(first, second):
-    return(first + second)
+    return first + second
 
 # After completing the functions, try these calls in the Python terminal:
 # say_welcome()
