@@ -12,7 +12,10 @@ def say_welcome():
     # TODO: Print the welcome message.
     pass
 
-
+def say_welcome():
+    print('welcome')
+    pass
+    
 # Part 2: Use a parameter and return a value.
 # A parameter receives an argument from the caller.
 # return sends a result back; print displays a result on the screen.
@@ -21,6 +24,8 @@ def double(number):
     # TODO: Return twice the given number.
     pass
 
+def double(number):
+    return number = number * 2
 
 # Part 3: Use two parameters.
 # Goal: add(3, 5) returns 8; add(10, 2) returns 12.
@@ -28,6 +33,8 @@ def add(first, second):
     # TODO: Return the sum of the two numbers.
     pass
 
+def add(first, second):
+    return(first + second)
 
 # After completing the functions, try these calls in the Python terminal:
 # say_welcome()
