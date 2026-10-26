@@ -9,12 +9,21 @@ Keep names and parameters unchanged. No imports are needed.
 def describe_temperature(temperature):
     pass
 
+def describe_temperature(temperature):
+    if temperature < 10: return 'cold'
+    elif temperature >= 10 and temperature <= 25: return 'warm'
+    else return 'hot'
 
 # 2. For Loop: Use a for loop to count even positive integers from 1 through n.
 # n is non-negative. Examples: 0 → 0, 5 → 2, 6 → 3.
 def count_evens(n):
     pass
 
+def count_evens(n):
+    count = 0
+    for i in range n:
+        if i % 2 == 0: count += 1
+    return count
 
 # 3. While Loop: Use a while loop to count how many times n can be halved (n // 2)
 # until it reaches 1. Stop when n <= 1. n is an integer >= 1.
@@ -22,9 +31,23 @@ def count_evens(n):
 def halve_until_one(n):
     pass
 
+def halve_until_one(n):
+    number = n
+    count = 0
+    while not number <= 1:
+        number = number / 2
+        count += 1
+    return count
 
 # 4. Recursion: Use recursion to return 2 raised to power n, without ** or pow().
 # n is a small non-negative integer. Examples: 0 → 1, 3 → 8.
 def power_of_two(n):
     pass
+
+def power_of_two(n):
+    output = 2
+    for i in range n:
+        output *= 2
+    return output
+
 
